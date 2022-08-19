@@ -25,6 +25,8 @@
     "joe": "^2.0.2",
     "mongoose": "^6.5.2",
     "nodemon": "^2.0.19",
-    "override": "0.0.1"
+    "override": "0.0.1",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
   }
 }
