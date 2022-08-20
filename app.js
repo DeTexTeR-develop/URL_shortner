@@ -4,6 +4,7 @@ const path = require('path');
 const port = process.env.PORT || 3223;
 const mongoose = require('mongoose');
 const urlRoutes = require('./routes/url');
+const redirectRoute = require('./routes/redirect');
 
 const dbUrl = 'mongodb://localhost:27017/url-shortner';
 mongoose.connect(dbUrl); 
@@ -21,6 +22,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 app.use('/url', urlRoutes); 
+app.use('/redirect', redirectRoute); 
 
 app.listen(port, () => {
     console.log(`App is listening at ${port}`);
